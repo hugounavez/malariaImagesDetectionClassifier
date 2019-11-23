@@ -15,6 +15,17 @@ data as a list of lists (matrix), where each number is a pixel of the image. The
 
 As a matter of example, the following images two cells, one is healthy and the other is parasited (infected):
 
-![Sample Image](image/healthy_vs_infected.png)
+![Sample Image](images/healthy_vs_infected.png)
 
 
+It can be seen that Cells infected show gray areas or stains thay can lead the diagnosis of the cell. In general, it seems when a cell has thoses stains is infected, otherwise is healthy. 
+
+#### Preprocessing
+
+Since the images in the datasize have not the same size, all images where resized by adding zero padding in their edges and croping the center or the region of interest. The final size was determined by the biggest width or hight of all images, the idea was to avoid the lost of information. 
+
+The following image describes with an acceptable detail the resized process:
+
+![Sample Image](images/re-sizing-images.png)
+
+After the resizing, all images were converted to a simple vector instead of matrices. 
